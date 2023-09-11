@@ -1,35 +1,67 @@
-main {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-.recipe {
-    
-    flex: 1;
-    max-width: 500px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    margin: 10px;
-    background-color: #f9f9f9;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.recipe2{
-    
-    flex: 1;
-    max-width: 500px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    margin: 10px;
-    background-color: #f9f9f9;
-    
-    
+.content {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px; /* ใช้ padding เพื่อไม่ให้เนื้อหาติดขอบ */
+}
+
+nav {
+    background-color: #4A3933;
+    color: aliceblue;
+    padding: 1rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+.maincontent {
+    background-color: #cccbcb;
+}
+
+.maincontent-con {
+    display: flex;
+    flex-wrap: wrap; /* ให้เนื้อหา wrap ในกรณีหน้าจอเล็ก */
+    justify-content: space-between;
+    align-items: center; /* จัดให้เนื้อหากลางแนวตั้ง */
+}
+
+.maincontent-info {
+    width: 50%; /* 50% ของความกว้างของพื้นที่เนื้อหา */
+    padding: 2rem;
+}
+
+.maincontent-info h3 {
+    font-size: 2rem;
+}
+
+.maincontent-info p {
+    margin: 1rem 0;
+}
+
+.maincontent-img img {
+    max-width: 100%; /* ขนาดรูปภาพจะไม่เกินพื้นที่ของ div */
+    height: auto; /* ป้องกันการเบี่ยงเบนภาพ */
+}
+
+
+
+/* เพิ่ม Media Queries สำหรับการทำ Responsive Design */
+@media (max-width: 768px) {
+    .maincontent-info {
+        width: 100%; /* 100% ของความกว้างเมื่อหน้าจอเล็ก */
+    }
+
+    .maincontent-img {
+        order: -1; /* เปลี่ยนลำดับการแสดงผลของรูปภาพ */
+        margin-top: 20px; /* เพิ่มระยะห่างข้างบน */
+    }
+
     
 }
